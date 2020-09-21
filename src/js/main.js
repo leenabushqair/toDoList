@@ -61,7 +61,7 @@ function addTask() {
     document.getElementById("count1").innerText= countToDo;
 }
 
-function searchTodo() { //still not working
+function searchTodo() { //repeat!
     var search = document.getElementById("search");
     var els = document.getElementById(".taskHolder");
     Array.prototype.forEach.call(els, function(p) {
@@ -70,3 +70,4 @@ function searchTodo() { //still not working
         else taskHolder.style.display = 'none';
       });
 }
+
