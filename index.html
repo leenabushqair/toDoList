@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src\css\style.css">
+    <link href="src/css/all.min.css" rel="stylesheet">
+    <link href="src\css\all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script src="src\js\main.js"></script>
+</head>
+<body>
+    <div class= container>
+        <div class="add-todo">
+            <div> 
+                <div  class="label1"> <span>Task</span> </div>
+                <div class="input1"> <input class="text1" id=task name="task" type="text" placeholder="placeholder"> </div>
+            </div>
+
+            <div>
+                <div class="label2" > <span>Assignee</span> </div>
+                <div class="input2"> <input class="text2" id="assignee" name="assignee" type="text" placeholder="placeholder"> </div>
+                <div class="add-button">
+                    <button type="button" onclick="addTask()">Add</button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="search-todo">
+            <div class="line">
+                ________________________________________________________
+            </div>
+            <div class="content">
+                <i class="fas fa-search"></i>
+                <input type="text" name="search" id="search" class="search" placeholder=" Search" onkeyup="searchTodo()">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <ul id= "list"></ul>
+
+        <div class="footer">
+            To do: 
+            Done:
+        </div>
+    </div>
+</body>

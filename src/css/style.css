@@ -1,0 +1,116 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+html, body {
+  width: 100%;
+  margin: 0;
+}
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+body {
+  margin: 30px
+}
+.container {
+  width: 450px;
+  min-height: 561px;
+  margin: 20px auto;
+  background-color: white;     
+}
+
+/* part one */ 
+.add-todo {
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.label1,.label2 {
+  display: inline-block;
+  width: 100px;
+}
+
+.input1, .input2 {
+  display: inline-block;
+}
+
+.add-todo .input1 .text1 {
+  width: 9.3rem;
+  height: 1.6rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  margin-bottom: 0.7rem;
+}
+
+.add-todo .input2 .text2 {
+  width: 9.3rem;
+  height: 1.6rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+  margin-bottom: 1rem;
+}
+
+.add-todo .add-button {
+  display: inline-block;
+}
+.add-todo .add-button button {
+  margin-left: 20px;
+  width: 6.5rem;
+  height: 1.6rem;
+  border-radius: 0.25rem;
+  border: 1px solid black;
+ }
+
+/* part two */ 
+.line {
+  font-weight: bolder;
+}
+
+.content {
+  margin: 1rem 0 1rem 0;
+  border: 0.5rem lightgrey solid;
+  display: flex;
+
+}
+.content #search {
+  border-color:transparent;
+  outline:none;
+  margin-right: 12rem;
+}
+.content i {
+  margin: 0 0.7rem 0 0.7rem;
+  color:grey;
+}
+
+/* part three */ 
+.list {
+  margin-bottom: 20px;
+}
+
+li {
+  list-style: none;
+} 
+
+.taskHolder, .assigneeHolder {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.taskWrapper i, .assigneeWrapper i {
+    float: right;
+}
+
+.assigneeWrapper {
+    margin-top: 10px;
+}
+
+ul li {
+    border: 1.5px solid black;
+    padding: 10px;
+    margin-top: 15px;
+}
