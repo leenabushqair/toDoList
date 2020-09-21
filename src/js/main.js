@@ -25,6 +25,8 @@ function addTask() {
     deleteIcon.onclick = function() {
         alert("Are you sure you want to delete this task?");//needs to be fixed
         li.parentNode.removeChild(li);
+        var countToDo = document.getElementById("list").children.length;
+        document.getElementById("count1").innerText= countToDo;
     }
     
     var doneIcon = document.createElement("i");
@@ -40,7 +42,23 @@ function addTask() {
     li.appendChild(taskWrapper);
     li.appendChild(assigneeWrapper);
     
+    doneIcon.onclick = function() {
+        var copied = li.cloneNode(true);
+        copied.firstChild.lastElementChild.remove();
+        copied.lastElementChild.lastElementChild.remove();
+        document.getElementById("doneList").appendChild(copied);
+        li.parentNode.removeChild(li);
+
+        var countToDo = document.getElementById("list").children.length;
+        document.getElementById("count1").innerText= countToDo;
+
+        var countDone = document.getElementById("doneList").children.length;
+        document.getElementById("count2").innerText= countDone;
+    }
+
     document.getElementById("list").appendChild(li);
+    var countToDo = document.getElementById("list").children.length;
+    document.getElementById("count1").innerText= countToDo;
 }
 
 function searchTodo() { //still not working
