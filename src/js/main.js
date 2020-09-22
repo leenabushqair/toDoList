@@ -1,4 +1,31 @@
+// 1) Store all classes in one object.
+// 2) Store all ids in one object.
+// 3) Store all elements that will be accessed in one object
+// 4) Create a model for the task ( shape of data ).
+// [{
+//     id: ,
+//     taskName: ,
+//     assignee: ,
+//     status: ,
+// }, {
+//     id: ,
+//     taskName: ,
+//     assignee: ,
+//     status: ,
+// }, {
+//     id: ,
+//     taskName: ,
+//     assignee: ,
+//     status: ,
+// }]
+// TODO: Why we don't have a place to hold data ?
+// TODO: use small functions as much as possible
+// TODO: try to separate the code to small modules
+// TODO: derive the UI from the data ( not the opposite)
+
 function addTask() {
+    // TODO: change var to const/ let.
+    // TODO: Use template instead of create everything inside javascript
     var task = document.getElementById("task").value;
     var assignee = document.getElementById("assignee").value;
     var li = document.createElement("li");
@@ -21,29 +48,32 @@ function addTask() {
     var deleteIcon = document.createElement("i");
     deleteIcon.classList.add("fas");
     deleteIcon.classList.add("fa-times-circle");
-    
+
+    // TODO: move to another function and use event listeners
     deleteIcon.onclick = function() {
-        alert("Are you sure you want to delete this task?");//needs to be fixed
         li.parentNode.removeChild(li);
         var countToDo = document.getElementById("list").children.length;
         document.getElementById("count1").innerText= countToDo;
     }
-    
+
     var doneIcon = document.createElement("i");
     doneIcon.classList.add("fas");
     doneIcon.classList.add("fa-check");
 
     taskWrapper.appendChild(taskHolder);
     taskWrapper.appendChild(deleteIcon);
-    
+
     assigneeWrapper.appendChild(assigneeHolder);
     assigneeWrapper.appendChild(doneIcon);
-    
+
     li.appendChild(taskWrapper);
     li.appendChild(assigneeWrapper);
-    
+
+    // TODO: move to another function
     doneIcon.onclick = function() {
+        // Good one
         var copied = li.cloneNode(true);
+        // TODO: done items should have the ability to be deleted.
         copied.firstChild.lastElementChild.remove();
         copied.lastElementChild.lastElementChild.remove();
         document.getElementById("doneList").appendChild(copied);
@@ -61,6 +91,7 @@ function addTask() {
     document.getElementById("count1").innerText= countToDo;
 }
 
+// TODO: change the way of searching based on new model described at line 4
 function searchTodo() { //repeat!
     var search = document.getElementById("search");
     var els = document.getElementById(".taskHolder");

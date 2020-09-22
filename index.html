@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO: be consistent with paths-->
+    <!-- TODO: Custom style should be the last one to modify the UI correctly -->
     <link rel="stylesheet" href="src\css\style.css">
     <link href="src/css/all.min.css" rel="stylesheet">
     <link href="src\css\all.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <!-- TODO: be consistent with paths -->
     <script src="src\js\main.js"></script>
 </head>
 <body>
     <div class= container>
         <div class="add-todo">
-            <div> 
+            <div>
+                <!-- TODO: ADD PROPER LABELS FOR EACH INPUT -->
                 <div  class="label1"> <span>Task</span> </div>
                 <div class="input1"> <input class="text1" id=task name="task" type="text" placeholder="placeholder"> </div>
             </div>
 
             <div>
+                <!-- TODO: ADD PROPER LABELS FOR EACH INPUT -->
                 <div class="label2" > <span>Assignee</span> </div>
                 <div class="input2"> <input class="text2" id="assignee" name="assignee" type="text" placeholder="placeholder"> </div>
                 <div class="add-button">
-                    <button type="button" onclick="addTask()">Add</button>
+                    <!-- TODO: Never ever add javascript inside html-->
+                    <!-- TODO: Use addEventListener instead of using onClick-->
+                    <!-- TODO: add data-role to let others know this is used inside javascript-->
+                    <button type="button">Add</button>
                 </div>
             </div>
 
@@ -33,7 +41,9 @@
             </div>
             <div class="content">
                 <i class="fas fa-search"></i>
-                <input type="text" name="search" id="search" class="search" placeholder=" Search" onkeyup="searchTodo()">
+                <!-- TODO: Use addEventListener instead of using onKeyup-->
+                <!-- TODO: add data-role to let others know this is used inside javascript-->
+                <input type="text" name="search" id="search" class="search" placeholder=" Search">
                 <i class="fas fa-times"></i>
             </div>
         </div>
@@ -41,10 +51,10 @@
         <ul id= "list"></ul>
 
         <div class="footer">
-            <div>To do: </div> 
-            <p id="count1"> </p> 
+            <div>To do: </div>
+            <p id="count1"> </p>
             <div>Done: </div>
-            <p id="count2"> </p> 
+            <p id="count2"> </p>
         </div>
 
         <ul id= "doneList"> </ul>
